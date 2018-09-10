@@ -1,0 +1,250 @@
+{
+    "version": "0",
+    "id": "fd628702-0656-456b-6cb8-6aacfc115e8e",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.ec2",
+    "account": "064561331775",
+    "time": "2018-09-10T19: 09: 50Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.05",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAIVE6NJGFGIHG2U5R4",
+            "arn": "arn:aws:iam: : 064561331775:user/dtenenba",
+            "accountId": "064561331775",
+            "accessKeyId": "ASIAQ6CBHXY73I4RQGX5",
+            "userName": "dtenenba",
+            "sessionContext": {
+                "attributes": {
+                    "mfaAuthenticated": "true",
+                    "creationDate": "2018-09-10T17: 15: 59Z"
+                }
+            },
+            "invokedBy": "signin.amazonaws.com"
+        },
+        "eventTime": "2018-09-10T19: 09: 50Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "RunInstances",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "140.107.73.105",
+        "userAgent": "signin.amazonaws.com",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "imageId": "ami-083c40aa53398f984",
+                        "minCount": 1,
+                        "maxCount": 1,
+                        "keyName": "batch_key"
+                    }
+                ]
+            },
+            "instanceType": "t2.micro",
+            "blockDeviceMapping": {
+                "items": [
+                    {
+                        "deviceName": "/dev/xvda",
+                        "ebs": {
+                            "volumeSize": 200,
+                            "deleteOnTermination": false,
+                            "volumeType": "gp2"
+                        }
+                    },
+                    {
+                        "deviceName": "/dev/sdg",
+                        "ebs": {
+                            "snapshotId": "snap-0b3698359fab984d0",
+                            "volumeSize": 4097,
+                            "deleteOnTermination": true,
+                            "volumeType": "gp2"
+                        }
+                    },
+                    {
+                        "deviceName": "/dev/sdf",
+                        "ebs": {
+                            "snapshotId": "snap-0cec9caf96b3b246a",
+                            "volumeSize": 1024,
+                            "deleteOnTermination": true,
+                            "volumeType": "gp2"
+                        }
+                    }
+                ]
+            },
+            "tenancy": "default",
+            "monitoring": {
+                "enabled": false
+            },
+            "disableApiTermination": false,
+            "instanceInitiatedShutdownBehavior": "stop",
+            "networkInterfaceSet": {
+                "items": [
+                    {
+                        "deviceIndex": 0,
+                        "subnetId": "subnet-d2ba0cb4",
+                        "description": "Primary network interface",
+                        "deleteOnTermination": true,
+                        "groupSet": {
+                            "items": [
+                                {
+                                    "groupId": "sg-6c8e7911"
+                                }
+                            ]
+                        },
+                        "ipv6AddressCount": 0
+                    }
+                ]
+            },
+            "ebsOptimized": false,
+            "tagSpecificationSet": {
+                "items": [
+                    {
+                        "resourceType": "instance",
+                        "tags": [
+                            {
+                                "key": "Name",
+                                "value": "dtenenba lambda test"
+                            },
+                            {
+                                "key": "owner",
+                                "value": "_adm/scicomp"
+                            }
+                        ]
+                    },
+                    {
+                        "resourceType": "volume",
+                        "tags": [
+                            {
+                                "key": "Name",
+                                "value": "dtenenba lambda test"
+                            },
+                            {
+                                "key": "owner",
+                                "value": "_adm/scicomp"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "creditSpecification": {
+                "cpuCredits": "standard"
+            }
+        },
+        "responseElements": {
+            "requestId": "d7ed4517-ce71-456b-8cbc-704ee1d5d1e3",
+            "reservationId": "r-08e5848e3357e5f4e",
+            "ownerId": "064561331775",
+            "groupSet": {},
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0a67ac1a5d1151f93",
+                        "imageId": "ami-083c40aa53398f984",
+                        "instanceState": {
+                            "code": 0,
+                            "name": "pending"
+                        },
+                        "privateDnsName": "ip-172-25-0-38.us-west-2.compute.internal",
+                        "keyName": "batch_key",
+                        "amiLaunchIndex": 0,
+                        "productCodes": {},
+                        "instanceType": "t2.micro",
+                        "launchTime": 1536606590000,
+                        "placement": {
+                            "availabilityZone": "us-west-2a",
+                            "tenancy": "default"
+                        },
+                        "monitoring": {
+                            "state": "disabled"
+                        },
+                        "subnetId": "subnet-d2ba0cb4",
+                        "vpcId": "vpc-318aec57",
+                        "privateIpAddress": "172.25.0.38",
+                        "stateReason": {
+                            "code": "pending",
+                            "message": "pending"
+                        },
+                        "architecture": "x86_64",
+                        "rootDeviceType": "ebs",
+                        "rootDeviceName": "/dev/xvda",
+                        "blockDeviceMapping": {},
+                        "virtualizationType": "hvm",
+                        "hypervisor": "xen",
+                        "tagSet": {
+                            "items": [
+                                {
+                                    "key": "Name",
+                                    "value": "dtenenba lambda test"
+                                },
+                                {
+                                    "key": "owner",
+                                    "value": "_adm/scicomp"
+                                }
+                            ]
+                        },
+                        "groupSet": {
+                            "items": [
+                                {
+                                    "groupId": "sg-6c8e7911",
+                                    "groupName": "default"
+                                }
+                            ]
+                        },
+                        "sourceDestCheck": true,
+                        "networkInterfaceSet": {
+                            "items": [
+                                {
+                                    "networkInterfaceId": "eni-0e2567369ca74e649",
+                                    "subnetId": "subnet-d2ba0cb4",
+                                    "vpcId": "vpc-318aec57",
+                                    "description": "Primary network interface",
+                                    "ownerId": "064561331775",
+                                    "status": "in-use",
+                                    "macAddress": "02: 48: 44: 3a: 4b: 40",
+                                    "privateIpAddress": "172.25.0.38",
+                                    "privateDnsName": "ip-172-25-0-38.us-west-2.compute.internal",
+                                    "sourceDestCheck": true,
+                                    "groupSet": {
+                                        "items": [
+                                            {
+                                                "groupId": "sg-6c8e7911",
+                                                "groupName": "default"
+                                            }
+                                        ]
+                                    },
+                                    "attachment": {
+                                        "attachmentId": "eni-attach-0635bb0548941bca2",
+                                        "deviceIndex": 0,
+                                        "status": "attaching",
+                                        "attachTime": 1536606590000,
+                                        "deleteOnTermination": true
+                                    },
+                                    "privateIpAddressesSet": {
+                                        "item": [
+                                            {
+                                                "privateIpAddress": "172.25.0.38",
+                                                "privateDnsName": "ip-172-25-0-38.us-west-2.compute.internal",
+                                                "primary": true
+                                            }
+                                        ]
+                                    },
+                                    "ipv6AddressesSet": {},
+                                    "tagSet": {}
+                                }
+                            ]
+                        },
+                        "ebsOptimized": false,
+                        "cpuOptions": {
+                            "coreCount": 1,
+                            "threadsPerCore": 1
+                        }
+                    }
+                ]
+            }
+        },
+        "requestID": "d7ed4517-ce71-456b-8cbc-704ee1d5d1e3",
+        "eventID": "35693eef-7c1f-4cc2-8530-597e2a098d8f",
+        "eventType": "AwsApiCall"
+    }
+}
