@@ -17,6 +17,9 @@ def lambda_handler(event, context):  # pylint: disable=unused-argument
     """
     This function is the lambda entry point.
     """
+    if not "items" in event["detail"]["requestParameters"]["blockDeviceMapping"]:
+        print("No volumes attached to this instance. Exiting.")
+        return    
     bdm = event["detail"]["requestParameters"]["blockDeviceMapping"]["items"]
     bad = [x for x in bdm if x["ebs"]["deleteOnTermination"] is False]
     if bad:

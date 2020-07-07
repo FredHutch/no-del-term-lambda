@@ -1,0 +1,130 @@
+{
+    "version": "0",
+    "id": "f78dac7b-d9c8-67ab-9200-f189876715bd",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.ec2",
+    "account": "064561331775",
+    "time": "2020-07-07T20:25:21Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.05",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROAJR66EWG2SZUFNKBDY:aws-batch",
+            "arn": "arn:aws:sts::064561331775:assumed-role/fh-pi-universal-batchservice/aws-batch",
+            "accountId": "064561331775",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROAJR66EWG2SZUFNKBDY",
+                    "arn": "arn:aws:iam::064561331775:role/fh-pi-universal-batchservice",
+                    "accountId": "064561331775",
+                    "userName": "fh-pi-universal-batchservice"
+                },
+                "webIdFederationData": {},
+                "attributes": {
+                    "mfaAuthenticated": "false",
+                    "creationDate": "2020-07-07T20:25:20Z"
+                }
+            },
+            "invokedBy": "batch.amazonaws.com"
+        },
+        "eventTime": "2020-07-07T20:25:21Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "RunInstances",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "batch.amazonaws.com",
+        "userAgent": "batch.amazonaws.com",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: nIwYWYa_J5GR66RAzk5_UVEUGdn_BZasDuqRfKQy0jcDU00s4E-4hsWN7PdOr8R70VXeSOwuzUKvdKsHsMqfnC_u2ROB9xEnzpWcFVg1PRh6OuxOdn2ZvtvOzs5yBCnsgtd92h1w4AXyvedQD0iPpzU9zcksd7BCB3MqXy_AbAfLo2KnzCh_6y2opll5ssQaJeWJy9Ty3bmTc15F1JgcMuC6BWb0RqfI-K6A-FNdIJnrxXByjnp7HdM2cUOmkSWcoSXAJkv5BiVzxWs2vZChMzmSn5_k-vfTJZfvszcvAlq8D6Tk8wCXHa-eJH-fTmNQ2nxCLLDx_cjoOYmW5mzN8oHFn6pOwvDycu9NocwQRmU32kZ9yhN5NvSjTWOgs7h7A5SCTLGlfLrhb1xqFNkyt500dYoCPGsthacGWiE8opE0t-NkEHtBg7XuGaYVnbsfYJs1dccuhgFAot6B3LA3-W6gYu9Gac6tS1dl7t_1gkojFeZv1Ve-tbTBOtWuFIZU8eIpLAD1YvsMYCFPVEh4oZ0umu3W1rLbOXCzHPt2T7HHf3v-3d9Gz3OFXIGcqKrt_HureZPiM3_thltOK-VHGEpgohiYmIX7jdVdNTuVar-MN_w9yUtP1KnZLIbHrfyHy2HA3yeEQiflgMhNDduMVEE8fvnrd2JxaRHsKCdsExQkk8gyBFdZgi5lJz7X1dpkUD_fIJJrbQluMw5aom-Uq6M4wCIs8Q",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "imageId": "ami-01ec24f4041f2d093",
+                        "minCount": 1,
+                        "maxCount": 1,
+                        "keyName": "batch_key"
+                    }
+                ]
+            },
+            "groupSet": {
+                "items": [
+                    {
+                        "groupId": "sg-6c8e7911"
+                    }
+                ]
+            },
+            "userData": "<sensitiveDataRemoved>",
+            "instanceType": "m4.2xlarge",
+            "blockDeviceMapping": {},
+            "monitoring": {
+                "enabled": false
+            },
+            "subnetId": "subnet-d2ba0cb4",
+            "disableApiTermination": false,
+            "clientToken": "a1314884-024f-403d-a054-9c2046beba2a",
+            "iamInstanceProfile": {
+                "arn": "arn:aws:iam::064561331775:instance-profile/fh-pi-universal-batchrole"
+            },
+            "tagSpecificationSet": {
+                "items": [
+                    {
+                        "resourceType": "instance",
+                        "tags": [
+                            {
+                                "key": "owner",
+                                "value": "SciComp"
+                            },
+                            {
+                                "key": "grant_critical",
+                                "value": "No"
+                            },
+                            {
+                                "key": "technical_contact",
+                                "value": "dtenenba@fredhutch.org"
+                            },
+                            {
+                                "key": "service",
+                                "value": "AWS Batch"
+                            },
+                            {
+                                "key": "billing_contact",
+                                "value": "dtenenba@fredhutch.org"
+                            },
+                            {
+                                "key": "maintenance_window",
+                                "value": "NA, run by AWS Batch"
+                            },
+                            {
+                                "key": "description",
+                                "value": "cpu-spot-40 compute environment"
+                            },
+                            {
+                                "key": "project",
+                                "value": "None"
+                            },
+                            {
+                                "key": "project_code",
+                                "value": "Batch"
+                            },
+                            {
+                                "key": "environment_name",
+                                "value": "cpu-spot-40"
+                            },
+                            {
+                                "key": "Name",
+                                "value": "cpu-spot-40"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "responseElements": null,
+        "requestID": "f301377c-634d-414a-8375-6afdb0206559",
+        "eventID": "b03c15e8-9c61-4a85-b0a5-7019dd42057b",
+        "eventType": "AwsApiCall"
+    }
+}
