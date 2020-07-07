@@ -28,7 +28,7 @@ def lambda_handler(event, context):  # pylint: disable=unused-argument
         resp = sns.publish(
             TopicArn="arn:aws:sns:us-west-2:064561331775:non-deleted-volume",
             Subject="Instance started with volume with deleteOnTermination=False!",
-            Message=json.dumps(event),
+            Message=json.dumps(event, sort_keys=True, indent=4),
         )
         print("Sent MessageId {} to SNS topic.".format(resp["MessageId"]))
 
